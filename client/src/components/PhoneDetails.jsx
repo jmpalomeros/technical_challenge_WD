@@ -9,7 +9,7 @@ function PhoneDetails() {
 
   useEffect (()=> {
     getDetails()
-  }, [])
+  }, [id])
 
  const  getDetails = async () => {
     try{
@@ -28,14 +28,15 @@ function PhoneDetails() {
   }
 
   return (
-    <div>PhoneDetails
+    <div>
     <h3>{details.name}</h3>
     <p>{details.manufacturer}</p>
     <p>{details.description}</p>
     <p>{details.price}</p>
     <p>{details.processor}</p>
     <p>{details.color}</p>
-    <p>{details.imageFileName}</p>
+    <img src={details.imageFileName} alt="phone" />
+    
     
     
     </div>

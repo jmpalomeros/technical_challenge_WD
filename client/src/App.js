@@ -1,20 +1,16 @@
 import { Routes, Route } from "react-router-dom";
-import './App.css';
-import PhoneList from './components/PhoneList';
-import PhoneDetails from './components/PhoneDetails';
-
+import "./App.css";
+import PhoneList from "./components/PhoneList";
+import PhoneDetails from "./components/PhoneDetails";
 
 function App() {
   return (
     <div className="App">
-      
+      <PhoneList />
 
-    <Routes>
-    
-      <Route path="/" element={<PhoneList />}/>
-      <Route path='/phones/:id' element={<PhoneDetails />}/>
-      
-    </Routes>
+      <Routes>
+        <Route path="/phones/:id" element={<PhoneDetails />} />
+      </Routes>
     </div>
   );
 }
